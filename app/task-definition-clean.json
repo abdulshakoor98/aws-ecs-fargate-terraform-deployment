@@ -1,0 +1,76 @@
+{
+    "taskDefinitionArn": "arn:aws:ecs:ap-south-1:286162616049:task-definition/aws-ecs-project-task:1",
+    "containerDefinitions": [
+        {
+            "name": "aws-ecs-project-container",
+            "image": "286162616049.dkr.ecr.ap-south-1.amazonaws.com/aws-ecs-project:latest",
+            "cpu": 0,
+            "portMappings": [
+                {
+                    "containerPort": 80,
+                    "hostPort": 80,
+                    "protocol": "tcp"
+                }
+            ],
+            "essential": true,
+            "environment": [],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-group": "/ecs/aws-ecs-project",
+                    "awslogs-region": "ap-south-1",
+                    "awslogs-stream-prefix": "ecs"
+                }
+            },
+            "systemControls": []
+        }
+    ],
+    "family": "aws-ecs-project-task",
+    "taskRoleArn": "arn:aws:iam::286162616049:role/aws-ecs-project-ecs-task-role",
+    "executionRoleArn": "arn:aws:iam::286162616049:role/aws-ecs-project-ecs-task-execution-role",
+    "networkMode": "awsvpc",
+    "revision": 1,
+    "volumes": [],
+    "status": "ACTIVE",
+    "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
+        },
+        {
+            "name": "ecs.capability.execution-role-awslogs"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.ecr-auth"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.task-iam-role"
+        },
+        {
+            "name": "ecs.capability.execution-role-ecr-pull"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+        },
+        {
+            "name": "ecs.capability.task-eni"
+        }
+    ],
+    "placementConstraints": [],
+    "compatibilities": [
+        "EC2",
+        "FARGATE",
+        "MANAGED_INSTANCES"
+    ],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "256",
+    "memory": "512",
+    "registeredAt": "2026-08-14T15:03:12.334000+05:00",
+    "registeredBy": "arn:aws:iam::286162616049:user/myadmin_user"
+}
