@@ -16,3 +16,10 @@ credentials
 
 # Logs
 *.log
+
+# Terraform working directory
+.terraform/
+
+# Terraform lock file can be committed
+# terraform.lock.hcl 
+terraform/current-state.json
